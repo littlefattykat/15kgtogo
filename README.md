@@ -1,21 +1,20 @@
-# 15kgtogo Version 3.1, zero-meets-goal revision
+# 15kgtogo Version 3.1 Fitness revision
 
-This is a complete static GitHub Pages package.
+Complete static GitHub Pages package.
 
-## Corrected calorie convention
-
-`difference from target = food calories - active calories - calculated target`
-
-- Negative: net intake is below the target, shown in Apple lime.
-- Zero: net intake exactly meets the target, also shown in Apple lime.
-- Positive: net intake is above the target, shown in pink/red.
-
-The Summary uses **Calorie Difference from Target** to make the sign convention clear.
+## Highlights
+- One concentric Fitness-style ring: pink net-calorie progress, lime exercise completion, cyan water progress.
+- Exercise ring completes when the selected day contains at least one exercise entry.
+- Date field is on its own line; Previous, Today and Next are grouped underneath.
+- Health-style line chart with Today, 7 days and 1 month (28 days / 4 weeks).
+- Food entries must use an exact Food List item plus quantity and matching unit. Calories and macros scale automatically.
+- Detailed macros appear in the daily Log.
+- Pencil edit button opens an editor; deletion is inside the Edit dialog.
+- Food List opens to saved foods, with Add, label photo OCR, Edit, and a pink minus button.
+- More colorful Fitness-inspired theme.
 
 ## Publish
+Upload all contents to the repository root. Keep `.github/workflows/pages.yml`. Set Settings > Pages > Source to GitHub Actions. Export current data before replacing files or clearing Safari storage.
 
-1. Export the current 15kgtogo backup first.
-2. Upload all contents of this folder to the GitHub repository root, replacing the prior files.
-3. Keep `.github/workflows/pages.yml`.
-4. In **Settings > Pages**, select **GitHub Actions**.
-5. After deployment, refresh Safari. If the installed Home Screen app remains cached, remove and add it again after preserving the backup.
+## Important
+OCR, calorie targets, and nutrition calculations are estimates. Verify package labels. A static GitHub Pages website does not directly connect to Apple Health; use wearable-provided active calories manually.
