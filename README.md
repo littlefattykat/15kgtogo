@@ -1,26 +1,19 @@
-# 15kgtogo
-
-Single GitHub Pages package.
+# 15kgtogo GitHub Pages v2
 
 ## Publish
+Upload the contents of this folder to the repository root and replace the old files. Keep `.github/workflows/pages.yml`. In **Settings > Pages**, use **GitHub Actions**.
 
-Upload the contents of this folder to the repository root and replace the old files. Keep `.github/workflows/pages.yml`. In repository **Settings > Pages**, choose **GitHub Actions**. The workflow is named **Deploy 15kgtogo to GitHub Pages**.
+## New in this package
+- Summary date control has no “Viewing date” text and is aligned with previous/next buttons.
+- Monthly Dashboard renders every calendar day, including zero-entry days. On phones the chart scrolls horizontally so all day labels remain visible.
+- Food List opens with the current list first. Select **Add food** to open the editor/scanner.
+- Manufacturer search removed. Google search remains in Add Food.
+- Mobile Close button is aligned in a sticky dialog header.
+- Meal Suggestion accepts a comma-separated natural-language ingredient list from Food List and proposes portions against remaining calories, protein, carbs, and fat.
+- Suggested portions can be added together to the selected date.
 
-If an old version remains, export a backup first, then clear site storage/cache or uninstall and reinstall the PWA.
+## Meal suggestion limitations
+The suggestion engine is a browser-side mathematical heuristic, not a dietitian or AI model. It only uses foods and nutrition values already saved in Food List. It searches ingredient names, changes serving multipliers between 0.25 and 4 servings, and minimizes the difference from remaining calorie and macro targets. Review practicality, appetite, allergies, sodium, micronutrients, cooking ingredients, and food safety yourself. The app does not construct separate breakfast/lunch/dinner menus automatically; it proposes one combined set of quantities and logs them as suggested foods.
 
-## Included changes
-
-- Date selector inside Summary, with previous, next, and Today controls
-- Import and Export grouped in the top navigation beside Food List and Profile & Goal
-- Context-sensitive Food, Exercise, and Weight forms
-- Food meal selector: Breakfast, Lunch, Dinner, Snack
-- Common Apple Health-style workout/activity selector and active-calorie input
-- Separate water section with +250 ml, +500 ml, and +1 L
-- Delete button on every selected-date log row
-- Separate Dashboard tab with 7-day and monthly analysis
-- Full backup including profile, goal, foods, entries, and water
-- Personal Food List and in-browser English nutrition-label OCR
-
-## Apple Health note
-
-The activity selector uses common activity names found in health/workout tracking ecosystems, but this static website does not connect to Apple Health. Use Apple Health active-calorie values when available. Direct HealthKit data requires a signed native iOS app or native wrapper and user permission.
+## Label OCR
+Tesseract.js is loaded from jsDelivr. Review OCR carefully for kcal versus kJ, decimals, and per-serving versus per-100 values.
