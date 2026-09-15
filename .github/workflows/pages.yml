@@ -1,4 +1,4 @@
-name: Deploy 15kgtogo to GitHub Pages
+name: Deploy 15kgtogo v3 to GitHub Pages
 on:
   push:
     branches: [main]
@@ -7,9 +7,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-concurrency:
-  group: pages
-  cancel-in-progress: true
 jobs:
   deploy:
     environment:
