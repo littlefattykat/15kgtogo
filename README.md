@@ -1,12 +1,21 @@
-# 15kgtogo v3
+# 15kgtogo Version 3.1, zero-meets-goal revision
 
-Full static GitHub Pages package with compact iPhone date picker, 52 px touch targets, larger button fonts, Food List, label OCR, water logging, daily/monthly dashboard, and separate Breakfast/Lunch/Dinner portion suggestions.
+This is a complete static GitHub Pages package.
+
+## Corrected calorie convention
+
+`difference from target = food calories - active calories - calculated target`
+
+- Negative: net intake is below the target, shown in Apple lime.
+- Zero: net intake exactly meets the target, also shown in Apple lime.
+- Positive: net intake is above the target, shown in pink/red.
+
+The Summary uses **Calorie Difference from Target** to make the sign convention clear.
 
 ## Publish
-Upload the contents of this folder to the repository root. In Settings > Pages, choose GitHub Actions. Keep `.github/workflows/pages.yml`.
 
-## Meal plan logic
-Enter at least three comma-separated foods already saved in Food List. The browser balances serving multipliers against remaining calories, protein, carbohydrates and fat, then assigns foods round-robin to Breakfast, Lunch and Dinner. This is a mathematical estimate, not dietary or medical advice. Review portions, allergens, cooking oils, sauces, sodium, micronutrients and practicality before logging.
-
-## iPhone update
-Export existing data before clearing site data. After deployment, refresh in Safari, remove the old Home Screen shortcut if necessary, then Add to Home Screen again.
+1. Export the current 15kgtogo backup first.
+2. Upload all contents of this folder to the GitHub repository root, replacing the prior files.
+3. Keep `.github/workflows/pages.yml`.
+4. In **Settings > Pages**, select **GitHub Actions**.
+5. After deployment, refresh Safari. If the installed Home Screen app remains cached, remove and add it again after preserving the backup.
