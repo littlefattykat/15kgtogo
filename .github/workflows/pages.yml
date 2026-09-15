@@ -1,4 +1,4 @@
-name: Deploy 15kgtogo Version 3.1
+name: Deploy 15kgtogo Version 3.1 Fitness
 on:
   push:
     branches: [main]
