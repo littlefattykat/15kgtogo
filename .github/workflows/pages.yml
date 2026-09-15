@@ -1,4 +1,4 @@
-name: Deploy 15kgtogo v3 to GitHub Pages
+name: Deploy 15kgtogo Version 3.1
 on:
   push:
     branches: [main]
