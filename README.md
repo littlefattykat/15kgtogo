@@ -1,21 +1,20 @@
-# CalTrack Web
+# CalTrack Rings update
 
-A mobile-first Progressive Web App for calories, exercise, water, macros, and weight trends.
+Mobile-first dark activity-ring interface with the summary first, automatically calculated calorie and macro targets, remaining macros, structured online nutrition lookup, and Google/manufacturer fallback.
 
-## Publish with GitHub Pages
+## Update GitHub Pages
 
-1. Create a public GitHub repository named `caltrack-web`.
-2. Upload all package contents, including the hidden `.github` folder, to the `main` branch.
-3. Open **Settings > Pages** and set **Source** to **GitHub Actions**.
-4. Open **Actions** and select the completed **Deploy CalTrack to GitHub Pages** workflow.
-5. Your public site will normally be available at `https://YOUR-USERNAME.github.io/caltrack-web/`.
+Upload the contents of this folder to the repository root and replace the existing files. Keep `.github/workflows/pages.yml`. In **Settings > Pages**, use **GitHub Actions**. Delete any accidental root-level `pages.yml` and any unused Azure workflow.
 
-## Privacy and data
+## Nutrition behavior
 
-The source website is public, but personal entries are stored only in each browser's local storage. They are not committed to GitHub or sent to a server. Anyone opening the public URL gets a separate empty dataset. Use Export and Import to transfer a backup between devices.
+Open Food Facts provides standardized calories and available protein, carbohydrate, fat, and fiber values. Selecting a result fills the meal form automatically. Product records may be incomplete, so verify the package label. Google and manufacturer buttons open manual searches and do not scrape snippets.
 
-Do not place passwords, private health records, personal identifiers, database credentials, or API keys in the repository. Automatic cloud synchronization and direct chat-agent integration require a secure backend, authentication, authorization rules, and a privacy review. Never put an AI API key in browser JavaScript.
+## Macro assumptions
 
-## Profile included
+- Protein: 1.4 g per kg of current body weight
+- Fat: 28% of target calories
+- Fiber: 25 g/day
+- Carbohydrate: remaining target calories after protein and fat
 
-Female, 35 years old, 170 cm, moderate activity, starting weight 90 kg, goal 75 kg by 26 December 2026, daily calorie target 2,000 kcal. Targets and projections are estimates.
+These are general planning estimates, not individualized clinical advice.
