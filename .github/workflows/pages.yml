@@ -1,4 +1,4 @@
-name: Deploy CalTrack to GitHub Pages
+name: Deploy 15kgtogo to GitHub Pages
 on:
   push:
     branches: [main]
